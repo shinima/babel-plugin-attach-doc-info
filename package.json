@@ -1,0 +1,27 @@
+{
+  "name": "babel-plugin-attach-doc-info",
+  "version": "7.0.0-alpha.0",
+  "scripts": {
+    "test": "node fixtures/run-test.js",
+    "prepublishOnly": ""
+  },
+  "author": {
+    "email": "feichao.sfc@alibaba-inc.com",
+    "name": "feichao.sfc",
+    "url": "https://github.com/shinima"
+  },
+  "homepage": "https://github.com/shinima/babel-plugin-attach-doc-info",
+  "dependencies": {
+    "sucrase": "^3.17.1"
+  },
+  "peerDependencies": {
+    "@babel/core": "7",
+    "@babel/types": "7"
+  },
+  "devDependencies": {
+    "@babel/core": "7",
+    "@babel/plugin-syntax-jsx": "7",
+    "@babel/types": "7",
+    "prettier": "^2.2.1"
+  }
+}
