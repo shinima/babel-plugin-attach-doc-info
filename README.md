@@ -112,7 +112,9 @@ export function TestComp() {
 
 WIP
 
-![react-live-demo](docs/react-live-demo.png)
+效果如下：
+
+![react-live-demo](https://raw.githubusercontent.com/shinima/babel-plugin-attach-doc-info/main/docs/react-live-demo.png)
 
 ## 配合 [MDX](https://mdxjs.com/)
 

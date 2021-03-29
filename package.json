@@ -2,8 +2,7 @@
   "name": "babel-plugin-attach-doc-info",
   "version": "7.0.0-alpha.0",
   "scripts": {
-    "test": "node fixtures/run-test.js",
-    "prepublishOnly": ""
+    "test": "node fixtures/run-test.js"
   },
   "author": {
     "email": "feichao.sfc@alibaba-inc.com",
@@ -11,6 +10,13 @@
     "url": "https://github.com/shinima"
   },
   "homepage": "https://github.com/shinima/babel-plugin-attach-doc-info",
+  "main": "src/index.js",
+  "files": [
+    "src/",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "dependencies": {
     "sucrase": "^3.17.1"
   },
