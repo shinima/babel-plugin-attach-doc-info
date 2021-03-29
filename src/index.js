@@ -10,6 +10,13 @@ const isDocInfoIdentifierName = (name) => {
 };
 
 function nodeLocExpression(loc) {
+  if (loc == null) {
+    return t.objectExpression([
+      t.objectProperty(t.identifier('start'), t.nullLiteral()),
+      t.objectProperty(t.identifier('end'), t.nullLiteral()),
+    ]);
+  }
+
   return t.objectExpression([
     t.objectProperty(
       t.identifier('start'),
