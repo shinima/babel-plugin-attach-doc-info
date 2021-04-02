@@ -26,10 +26,12 @@ babel.config.json：
 ## 示例
 
 ```jsx
+import { Button } from 'antd';
+
 const data = { foo: [1, 2, 3] };
 
 export const Test = () => {
-  return <h1>Numbers: {data.foo.join(',')}</h1>;
+  return <Button>Numbers: {data.foo.join(',')}</Button>;
 };
 ```
 
