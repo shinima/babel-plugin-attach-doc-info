@@ -47,7 +47,7 @@ const __doc_info_data = {
   name: 'data',
   value: data,
   source: 'const data = { foo: [1, 2, 3] };',
-  deps: [],
+  deps: () => [],
   provides: {},
 };
 
@@ -60,7 +60,7 @@ const __doc_info_Test = {
   name: 'Test',
   value: Test,
   source: "const Test = () => {\n  return <Button>Numbers: {data.foo.join(',')}</Button>;\n};",
-  deps: [__doc_info_data],
+  deps: () => [__doc_info_data],
   provides: { Button: Button },
 };
 
@@ -107,7 +107,7 @@ export function TestComp() {
   return <div>{getData().hello}</div>;
 }
 // 通过以下代码可以获取到 A.js 中 data 的附加信息：
-//   TestComp.__doc_info.provides.getData.__doc_info.deps = [ __doc_info_data ]
+//   TestComp.__doc_info.provides.getData.__doc_info.deps() = [ __doc_info_data ]
 ```
 
 ## 配合 [react-live](https://github.com/FormidableLabs/react-live)
