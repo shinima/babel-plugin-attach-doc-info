@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-attach-doc-info",
-  "version": "7.0.0-alpha.1",
+  "version": "7.0.0",
   "scripts": {
     "test": "node fixtures/run-test.js"
   },
