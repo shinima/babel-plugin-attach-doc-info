@@ -108,7 +108,13 @@ function getAppendDocInfoStatement(path, node) {
         t.objectProperty(t.identifier('source'), t.stringLiteral(source)),
         t.objectProperty(
           t.identifier('deps'),
-          t.arrayExpression(deps.map((depName) => t.identifier(getDocInfoIdentifierName(depName)))),
+          // 使用一个内联的箭头函数，避免提前引用 docInfo，应对变量之间相互依赖的情况
+          t.arrowFunctionExpression(
+            [],
+            t.arrayExpression(
+              deps.map((depName) => t.identifier(getDocInfoIdentifierName(depName))),
+            ),
+          ),
         ),
         t.objectProperty(
           t.identifier('provides'),
